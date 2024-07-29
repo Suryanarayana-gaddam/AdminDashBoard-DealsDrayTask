@@ -1,0 +1,8 @@
+th,tr,td{
+    border: 2px solid black; 
+    width: 100vh;  
+    text-align: center; 
+}
+th{
+    font-size: large;
+}
