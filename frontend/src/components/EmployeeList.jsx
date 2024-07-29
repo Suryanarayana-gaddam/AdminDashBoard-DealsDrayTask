@@ -139,11 +139,11 @@ const EmployeeList = () => {
   return (
     <div className={`grid grid-cols-1 place-items-center px-3  ${visible ? "bg-opacity-20 h-screen bg-amber-400" : " "}`}>
       <div className={`${visible ? "hidden" : "flex"}  w-full absolute top-20 mt-3 `}>
-        <div className='absolute left-0 md:left-10 top-0 md:px-1 w-full'><h1 className='text-[20px]'>
+        <div className='absolute left-0 md:left-10 top-0 md:px-1 w-full'><h1 className='text-center md:text-left md:text-[20px]'>
           Welcome <b>{userName}</b>, here&apos;s list of Employeers... </h1>
         </div>
         <div className='absolute right-2 md:right-10 top-16 md:top-0'>
-        <button onClick={handlePopup} className={`cursor-pointer flex  bg-green-400 rounded px-2 py-1 hover:bg-green-200 font-bold `}><FaPlus/><span className='relative bottom-1'>
+        <button onClick={handlePopup} className={`cursor-pointer flex relative bottom-9 md:bottom-0 bg-green-400 rounded px-2 py-1 hover:bg-green-200 font-bold `}><FaPlus/><span className='relative bottom-1'>
            Create Employee</span></button>
         </div>
       </div>
@@ -212,7 +212,7 @@ const EmployeeList = () => {
           </form>
         </div>
       </div>
-      <div className={` ${visible ? "hidden" : "block"} mt-24 md:mb-5 w-full `}>
+      <div className={` ${visible ? "hidden" : "block"} mt-28 md:mt-20 mb-0 md:mb-5 w-full `}>
             <EmployeeTable/>
       </div>
     </div>

@@ -144,8 +144,8 @@ const EmployeeTable = () => {
 
     return (
         <div >
-            <div className=' h-full pt-10'>
-            <div className=' absolute left-1 md:right-2 top-40 p-1 border-black'>
+            <div className=' '>
+            <div className=' absolute md:right-52 top-[120px] md:top-[90px] p-1 border-black'>
                 <label htmlFor="searh" className='mr-2 md:text-xl '>Search</label>
                 <input type="text" id='seach'  value={searchQuery} onChange={handleSearch} className='border-2 border-black pl-1 w-32 md:w-fit'/>
             </div>
