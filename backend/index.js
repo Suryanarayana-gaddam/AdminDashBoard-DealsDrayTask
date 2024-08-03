@@ -151,7 +151,10 @@ async function run() {
       res.status(500).json("Internal server error!")
     }
   })
-
+  
+  app.listen(port,() => {
+      console.log(`App listening on port number : ${port}`);
+  })
 
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
@@ -162,8 +165,6 @@ async function run() {
 run().catch(console.dir);
 
 
-app.listen(port,() => {
-    console.log(`App listening on port number : ${port}`);
-})
+
 
 module.exports = app
