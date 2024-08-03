@@ -69,7 +69,7 @@ const EmployeeList = () => {
     const course = selectedCourses;
     const empData = { userName,empName,email,designation,mobile,gender,course,img:profilePic,date:new Date() };
     console.log("empData :",empData)
-    fetch(`http://localhost:5080/add/employee/${userName}`, {
+    fetch(`https://admin-dash-board-api.vercel.app/add/employee/${userName}`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

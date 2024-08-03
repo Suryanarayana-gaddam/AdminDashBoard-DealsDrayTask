@@ -16,7 +16,7 @@ const Login = () => {
       username,
       password
     }
-    fetch("http://localhost:5080/login-user",{
+    fetch("https://admin-dash-board-api.vercel.app/login-user",{
       method:"POST",
       headers:{
         "Content-type" : "application/json",

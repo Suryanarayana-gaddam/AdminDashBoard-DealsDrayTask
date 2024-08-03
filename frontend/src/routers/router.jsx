@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path :`edit/employee/:employeeId`,
                 element : <EditEmployee/>,
-                loader : ({params}) => fetch(`http://localhost:5080/get/employee/${params.employeeId}`,{
+                loader : ({params}) => fetch(`https://admin-dash-board-api.vercel.app/get/employee/${params.employeeId}`,{
                     method : "GET",
                     headers : {
                         "Content-type" :"application/json"

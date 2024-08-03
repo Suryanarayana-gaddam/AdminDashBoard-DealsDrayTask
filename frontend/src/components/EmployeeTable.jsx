@@ -53,7 +53,7 @@ const EmployeeTable = () => {
 
       useEffect(() => {
         if (userName) {
-            const fetchUrl = `http://localhost:5080/get/employees/${userName}`;
+            const fetchUrl = `https://admin-dash-board-api.vercel.app/get/employees/${userName}`;
             setUrl(fetchUrl);
         }
     }, [userName]);
@@ -73,7 +73,7 @@ const EmployeeTable = () => {
         event.preventDefault();
         const isConfirmed = window.confirm(`Do you want to delete ${employeeName} ?`);
         if(isConfirmed){
-            fetch(`http://localhost:5080/delete/employee/${employeeId}`,{
+            fetch(`https://admin-dash-board-api.vercel.app/delete/employee/${employeeId}`,{
                 method: "DELETE",
                 headers : {
                     "Content-type" : "application/json"

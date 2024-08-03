@@ -69,7 +69,7 @@ const EditEmployee = () => {
         const course = selectedCourses;
         const empData = { userName,empName,email,designation,mobile,gender,course,img:profilePic };
         console.log("empData :",empData)
-        fetch(`http://localhost:5080/update/employee/${_id}`, {
+        fetch(`https://admin-dash-board-api.vercel.app/update/employee/${_id}`, {
         method: "PATCH",
         headers: {
             "Content-type": "application/json",

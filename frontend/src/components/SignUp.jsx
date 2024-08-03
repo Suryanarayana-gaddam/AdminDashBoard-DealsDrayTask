@@ -17,7 +17,7 @@ const SignUp = () => {
       username,password
     }
     console.log("User:",user)
-    fetch("http://localhost:5080/register-user",{
+    fetch("https://admin-dash-board-api.vercel.app/register-user",{
       method:"POST",
       headers : {
         "content-type" : "application/json",
