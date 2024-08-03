@@ -7,7 +7,10 @@ const bcrypt = require('bcryptjs');
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = process.env.MONGOURI;
-app.use(cors());
+const corsOptions = {
+  origin:["https://admin-dash-board-api.vercel.app/","https://admin-dash-board-indol-six.vercel.app/"]
+}
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
