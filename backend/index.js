@@ -7,7 +7,6 @@ const bcrypt = require('bcryptjs');
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = process.env.MONGO_DB_URI;
-console.log(uri)
 const corsOptions = {
   origin:["https://admin-dash-board-api.vercel.app/","http://localhost:5173","http://localhost:5080/","https://admin-dash-board-indol-six.vercel.app/"]
 }
