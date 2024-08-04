@@ -6,14 +6,15 @@ const port = process.env.PORT || 5080;
 const bcrypt = require('bcryptjs');
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-const uri = process.env.MONGOURI;
+const uri = process.env.MONGO_DB_URI;
+console.log(uri)
 const corsOptions = {
   origin:["https://admin-dash-board-api.vercel.app/","http://localhost:5173","http://localhost:5080/","https://admin-dash-board-indol-six.vercel.app/"]
 }
 app.use(cors(corsOptions));
 
 app.use(express.json());
-
+app.use(express.urlencoded({extended:true}));
 app.get("/", (req,res) => {
     res.send("Hello World!");
 })
