@@ -44,12 +44,13 @@ async function run() {
 }
 run().catch(console.dir);
 
-
 app.post("/register-user",async (req,res) => {
   try {
     const {username,password} = req.body;
+    console.log(username,password)
     const hashedPassword = await bcrypt.hash(password,10);
-    const existingUser = await users.findOne({username});
+    const existingUser = await users.findOne({username: username});
+    console.log(existingUser)
     if(existingUser){
       return res.status(403).json("User exists with similar credentials!")
     }
@@ -68,7 +69,7 @@ app.post("/register-user",async (req,res) => {
 app.post("/login-user",async (req,res) => {
 try{
     const {username,password} = req.body;
-    const UserDetails = await users.findOne({username});
+    const UserDetails = await users.findOne({username : username});
     if(!UserDetails){
         return res.status(404).json("User not found! Please Create an account and try again...")
     }
