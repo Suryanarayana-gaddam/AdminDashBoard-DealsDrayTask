@@ -32,7 +32,7 @@ const Login = () => {
       }
       console.log("res:",res)
       alert("Welcome Back User...")
-      navigate("/",{replace:true});
+      navigate("/");
       return res.json();
     }).then(response => {
       localStorage.removeItem("username")
