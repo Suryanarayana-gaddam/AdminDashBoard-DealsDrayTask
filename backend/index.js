@@ -4,6 +4,7 @@ const cors = require("cors")
 require("dotenv").config();
 const port = process.env.PORT || 5080;
 const bcrypt = require('bcryptjs');
+const serverless = require('serverless-http');
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = process.env.MONGO_DB_URI;
@@ -174,3 +175,4 @@ app.listen(port,() => {
   })
 
 module.exports = app
+module.exports.handler = serverless(app);
