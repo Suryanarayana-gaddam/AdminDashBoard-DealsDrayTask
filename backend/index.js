@@ -9,7 +9,7 @@ const serverless = require('serverless-http');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = process.env.MONGO_DB_URI;
 const corsOptions = {
-  origin:["https://admin-dash-board-api.vercel.app/","http://localhost:5173","http://localhost:5080/","https://admin-dash-board-indol-six.vercel.app"]
+  origin:["https://admin-dash-board-api.vercel.app","http://localhost:5173","http://localhost:5080","https://admin-dash-board-indol-six.vercel.app"]
 }
 app.use(cors(corsOptions));
 
@@ -70,6 +70,7 @@ app.post("/register-user",async (req,res) => {
 app.post("/login-user",async (req,res) => {
 try{
     const {username,password} = req.body;
+    console.log(req.body)
     const UserDetails = await users.findOne({username : username});
     if(!UserDetails){
         return res.status(404).json("User not found! Please Create an account and try again...")
