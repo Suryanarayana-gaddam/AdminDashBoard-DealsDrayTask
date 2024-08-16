@@ -14,6 +14,9 @@ function App() {
       if(!localStorage.getItem("username") && location.href!=="https://admin-dash-board-indol-six.vercel.app/"){
         navigate("/signup");
         setLoading(false);
+      }else{
+        navigate("/");
+        setLoading(false);
       }
     },2000);
   },[location.href,localStorage.getItem("username")])

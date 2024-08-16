@@ -32,7 +32,7 @@ const SignUp = () => {
       }
       localStorage.removeItem("username")
       localStorage.setItem("username",username)
-      alert("Signed Up Successfully!")  
+      alert("Signed Up Successfully!  ")  
       navigate("/")
     }).catch(error =>{
       alert("Error:",error)
