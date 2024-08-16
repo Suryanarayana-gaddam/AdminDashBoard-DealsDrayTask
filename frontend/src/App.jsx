@@ -15,6 +15,7 @@ function App() {
         navigate("/signup");
         setLoading(false);
       }
+      setLoading(false)
     },3000);
   },[localStorage.getItem("username")])
 
