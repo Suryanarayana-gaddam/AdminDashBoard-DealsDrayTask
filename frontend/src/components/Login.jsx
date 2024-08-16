@@ -33,13 +33,13 @@ const Login = () => {
         }
       }
       console.log("res:",res)
-      alert("Welcome Back User...")
-      navigate("/");
       return res.json();
     }).then(response => {
       localStorage.removeItem("username")
       console.log(response)
       localStorage.setItem("username",response.username)
+      alert("Welcome Back User...")
+      navigate("/home");
     }).catch(error =>{
       console.error("Error in Login:",error)
     })
