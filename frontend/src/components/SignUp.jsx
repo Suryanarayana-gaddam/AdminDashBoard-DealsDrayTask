@@ -27,8 +27,6 @@ const SignUp = () => {
       if(res.status === 403){
         alert(res.status+" : Existing User, Please login!");
         return navigate("/login");
-      }else{
-        alert(res.status+res)
       }
       localStorage.removeItem("username")
       localStorage.setItem("username",username)
