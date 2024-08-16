@@ -14,7 +14,7 @@ const EmployeeList = () => {
   const [profilePic,setProfilePic] = useState("");
   const [selectedCourses, setSelectedCourses] = useState([]);
 
-  const handleChange = (e) => {
+  const handleChange = (e) => { 
     const { value, checked } = e.target;
     setSelectedCourses((prevSelectedCourses) =>
       checked

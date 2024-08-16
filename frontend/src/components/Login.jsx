@@ -28,6 +28,8 @@ const Login = () => {
           return alert(res.status+" : User not found");
         }else if(res.status === 401){
           return alert(res.status+" : Password is Incorrect");
+        }else{
+          return console.log("Error :",res.status,res)
         }
       }
       console.log("res:",res)
