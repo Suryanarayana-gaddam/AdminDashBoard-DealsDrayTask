@@ -11,15 +11,12 @@ function App() {
   useEffect(() => {
     setLoading(true)
     setTimeout(() =>{
-      if(!localStorage.getItem("username") && location.href!=="https://admin-dash-board-indol-six.vercel.app/"){
+      if(!localStorage.getItem("username")){
         navigate("/signup");
-        setLoading(false);
-      }else{
-        navigate("/");
         setLoading(false);
       }
     },3000);
-  },[location.href,localStorage.getItem("username")])
+  },[localStorage.getItem("username")])
 
   if(loading){
     return <div className=" flex flex-col items-center justify-center h-screen">
