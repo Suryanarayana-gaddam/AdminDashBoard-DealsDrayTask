@@ -18,7 +18,7 @@ function App() {
         navigate("/");
         setLoading(false);
       }
-    },2000);
+    },3000);
   },[location.href,localStorage.getItem("username")])
 
   if(loading){

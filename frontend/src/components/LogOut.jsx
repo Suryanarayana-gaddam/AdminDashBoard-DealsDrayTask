@@ -10,7 +10,7 @@ const LogOut = () => {
     if(isConfirmed){
       localStorage.removeItem("username");
       alert("Logged out !")
-      navigate("/")
+      navigate("/login")
     }
   }
 

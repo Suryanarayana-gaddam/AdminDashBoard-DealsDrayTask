@@ -39,7 +39,7 @@ const Login = () => {
       console.log(response)
       localStorage.setItem("username",response.username)
       alert("Welcome Back User...")
-      navigate("/home");
+      navigate("/");
     }).catch(error =>{
       console.error("Error in Login:",error)
     })
